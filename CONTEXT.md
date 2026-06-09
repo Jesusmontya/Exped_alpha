@@ -140,3 +140,31 @@ backend/
 - POST /auth/login
 - Middleware de autenticación (proteger rutas)
 - GET/POST /pacientes
+
+
+  ### Checkpoint 4 — sesión 3
+
+### Lo que se hizo
+- Middleware de autenticación con JWT (get_current_user)
+- GET /pacientes — lista pacientes del médico autenticado
+- POST /pacientes — crea paciente vinculado al médico
+- Primer paciente de prueba creado y verificado en Supabase
+
+### Estructura backend actual
+backend/
+├── app/
+│   ├── main.py
+│   ├── database.py
+│   ├── middleware/
+│   │   └── auth.py
+│   └── routes/
+│       ├── auth.py
+│       └── pacientes.py
+├── .env
+├── .env.example
+└── requirements.txt
+
+### Siguiente paso
+- GET /pacientes/{id} — detalle de un paciente
+- POST /consultas — crear consulta vinculada a paciente
+- GET /consultas/{paciente_id} — historial de consultas
