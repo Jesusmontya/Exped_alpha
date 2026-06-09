@@ -89,3 +89,27 @@ Definir y aplicar el schema completo en Supabase, enfocado en especialidades qui
 - Early adopter identificado: Dra. Alma Lorena
 - Idea de hojas membretadas como producto adicional incorporada
 - Mañana: más entrevistas de campo buscando Grupo 1 (quirúrgicas)
+
+
+## Checkpoint 2 — sesión 3
+
+### Lo que se hizo
+- Schema de base de datos diseñado y aplicado en Supabase
+  - 10 tablas: perfiles, medicos, configuracion_medico, asistentes_medico,
+    pacientes, consultas, archivos, recetas, receta_medicamentos, ordenes_estudio
+  - RLS activado en todas las tablas
+  - Índices de performance aplicados
+- Proyecto creado en Supabase (us-east-1)
+- Estructura de carpetas del repo definida (backend + frontend)
+- Backend Node.js + Express inicializado y corriendo en localhost:3000
+- Supabase conectado y verificado desde el backend
+
+### Stack confirmado corriendo
+- Node.js + Express → localhost:3000
+- Supabase (PostgreSQL + Auth + Storage) → conectado
+- /health endpoint respondiendo
+
+### Siguiente paso
+- Limpiar index.js (quitar bloque de prueba)
+- Primera ruta real: GET /pacientes
+- Después: POST /pacientes, y así construir el CRUD base
