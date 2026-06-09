@@ -9,8 +9,17 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
+const checkSupabaseHealth = async () => {
+  const healthResponse = await fetch(`${supabaseUrl}/auth/v1/health`, {
+    headers: {
+      apikey: supabaseAnonKey
+    }
+  });
+
+  return healthResponse.ok;
+};
+
 module.exports = {
   supabase,
-  supabaseUrl,
-  supabaseAnonKey
+  checkSupabaseHealth
 };
