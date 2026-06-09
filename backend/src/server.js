@@ -17,12 +17,24 @@ app.get('/health', async (req, res) => {
     });
 
     if (!healthResponse.ok) {
-      return res.status(503).json({ status: 'error', supabaseConnected: false });
+      return res.status(503).json({
+        status: 'error',
+        supabaseConnected: false,
+        supabaseClientInitialized: Boolean(supabase)
+      });
     }
 
-    return res.json({ status: 'ok', supabaseConnected: true });
+    return res.json({
+      status: 'ok',
+      supabaseConnected: true,
+      supabaseClientInitialized: Boolean(supabase)
+    });
   } catch (error) {
-    return res.status(503).json({ status: 'error', supabaseConnected: false });
+    return res.status(503).json({
+      status: 'error',
+      supabaseConnected: false,
+      supabaseClientInitialized: Boolean(supabase)
+    });
   }
 });
 
