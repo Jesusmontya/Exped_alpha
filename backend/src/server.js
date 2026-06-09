@@ -30,6 +30,8 @@ app.get('/health', async (req, res) => {
       supabaseClientInitialized: Boolean(supabase)
     });
   } catch (error) {
+    console.error('Supabase health check failed:', error.message);
+
     return res.status(503).json({
       status: 'error',
       supabaseConnected: false,
