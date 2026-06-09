@@ -113,3 +113,30 @@ Definir y aplicar el schema completo en Supabase, enfocado en especialidades qui
 - Limpiar index.js (quitar bloque de prueba)
 - Primera ruta real: GET /pacientes
 - Después: POST /pacientes, y así construir el CRUD base
+
+  ### Checkpoint 3 — sesión 3
+
+### Lo que se hizo
+- Decisión: cambiar backend de Node.js/Express a FastAPI + Python
+  (razón: integración futura con IA)
+- Backend FastAPI inicializado y corriendo en localhost:8000
+- Conexión a Supabase verificada desde FastAPI
+- Endpoint POST /auth/registro funcionando end-to-end:
+  crea usuario en Supabase Auth → perfil → médico
+- Primer médico de prueba creado: alma.lorena@exped.com
+
+### Estructura backend actual
+backend/
+├── app/
+│   ├── main.py
+│   ├── database.py
+│   └── routes/
+│       └── auth.py
+├── .env
+├── .env.example
+└── requirements.txt
+
+### Siguiente paso
+- POST /auth/login
+- Middleware de autenticación (proteger rutas)
+- GET/POST /pacientes
