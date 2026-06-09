@@ -206,3 +206,25 @@ backend/
 - GET /pacientes/{id} — detalle de un paciente
 - POST /consultas — crear consulta vinculada a paciente
 - GET /consultas/{paciente_id} — historial de consultas
+
+### Checkpoint 6 — sesión 3
+
+### Lo que se hizo
+- Endpoint POST /archivos creado (subida de fotos/archivos)
+- Endpoint GET /archivos creado (listar archivos por paciente)
+- Endpoint GET /archivos/{id}/url creado (URL firmada por 1 hora)
+- Endpoint DELETE /archivos/{id} creado
+- Bucket "archivos" creado en Supabase Storage (privado)
+- Instalado python-multipart para manejo de archivos
+
+### Bloqueado
+- Upload a Supabase Storage falla con 403 RLS
+- Intentos:
+  - Política service_role desde dashboard → no funcionó
+  - SQL: create policy on storage.objects → no funcionó
+  - SQL: alter table storage.objects disable RLS → sin permisos
+- Pendiente: desactivar RLS desde el dashboard de Storage
+
+### Siguiente paso
+- Resolver RLS de Storage
+- Verificar upload de foto funcionando end-to-end
