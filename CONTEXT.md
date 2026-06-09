@@ -164,6 +164,44 @@ backend/
 ├── .env.example
 └── requirements.txt
 
+### Checkpoint 5 — sesión 3
+
+### Lo que se hizo
+- CRUD completo de pacientes funcionando:
+  - GET /pacientes
+  - POST /pacientes
+  - GET /pacientes/{id}
+  - PUT /pacientes/{id}
+- CRUD de consultas funcionando:
+  - GET /consultas?paciente_id=
+  - POST /consultas
+  - GET /consultas/{id}
+  - PUT /consultas/{id}
+- Nota: cada request hace 2 queries a Supabase (optimizar después
+  guardando medico_id en token)
+
+### Estructura backend actual
+backend/
+├── app/
+│   ├── main.py
+│   ├── database.py
+│   ├── middleware/
+│   │   └── auth.py
+│   └── routes/
+│       ├── auth.py
+│       ├── pacientes.py
+│       └── consultas.py
+├── .env
+├── .env.example
+└── requirements.txt
+
+### Pendiente de optimización
+- Guardar medico_id en JWT para evitar query extra por request
+
+### Siguiente paso
+- Subida de archivos/fotos vinculadas a consulta (Supabase Storage)
+- O recetas — decidir orden
+
 ### Siguiente paso
 - GET /pacientes/{id} — detalle de un paciente
 - POST /consultas — crear consulta vinculada a paciente
