@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const supabase = require('./supabaseClient');
+const { supabase, supabaseUrl, supabaseAnonKey } = require('./supabaseClient');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,9 +10,9 @@ app.use(express.json());
 
 app.get('/health', async (req, res) => {
   try {
-    const healthResponse = await fetch(`${process.env.SUPABASE_URL}/auth/v1/health`, {
+    const healthResponse = await fetch(`${supabaseUrl}/auth/v1/health`, {
       headers: {
-        apikey: process.env.SUPABASE_ANON_KEY
+        apikey: supabaseAnonKey
       }
     });
 
