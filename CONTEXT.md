@@ -109,3 +109,11 @@ Construir el frontend mínimo en HTML/CSS/JS:
 3. Crear paciente
 4. Detalle de paciente + historial de consultas
 5. Crear consulta + subir foto
+
+
+## Módulo de agenda
+- Médico puede bloquear horarios con motivo privado
+- Asistente puede agendar citas pero no ve el motivo de los bloqueos
+- Ambos ven disponibilidad del médico
+- Requiere agregar tabla `agenda` al schema cuando lleguemos a este módulo
+- Pendiente de desarrollar (no bloqueante para MVP)
