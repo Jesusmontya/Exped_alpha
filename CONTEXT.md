@@ -211,3 +211,25 @@ antes de seguir construyendo?
 ### Siguiente paso
 Recetas — último módulo grande antes de mostrarle el prototipo
 a la Dra. Alma Lorena
+
+### Checkpoint 11 — sesión 3
+
+### Lo que se hizo
+- Backend completo de recetas:
+  - GET/POST/DELETE /recetas
+  - Tabla receta_medicamentos con RLS corregido
+- Frontend tab "Recetas" en detalle de paciente:
+  - Modal para crear receta con múltiples medicamentos dinámicos
+  - Cada medicamento: nombre, dosis, frecuencia, duración, indicación específica
+  - Indicaciones generales de la receta
+  - Listado de recetas con fecha y medicamentos
+  - Eliminar receta
+  - Botón "Imprimir" placeholder (pendiente: hojas membretadas)
+
+### Estado del MVP — CASI COMPLETO
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas
+⏳ Pendiente: Órdenes de estudio, PDF expediente, impresión hojas membretadas
+
+### Siguiente paso
+Decidir: ¿Órdenes de estudio (similar a recetas) o ya mostrarle
+el prototipo a la Dra. Alma Lorena para feedback real?
