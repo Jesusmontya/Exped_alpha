@@ -117,3 +117,31 @@ Construir el frontend mínimo en HTML/CSS/JS:
 - Ambos ven disponibilidad del médico
 - Requiere agregar tabla `agenda` al schema cuando lleguemos a este módulo
 - Pendiente de desarrollar (no bloqueante para MVP)
+
+
+  ### Checkpoint 7 — sesión 3
+
+### Lo que se hizo
+- Frontend completo rehecho con layout profesional:
+  - Sidebar izquierda con navegación por secciones
+  - Dark mode automático según OS
+  - Iconos Tabler
+  - Login limpio
+  - Dashboard con stats y últimos pacientes
+  - Lista de pacientes con buscador
+  - Modal de nuevo paciente funcionando end-to-end
+- Tabler Icons integrados via CDN
+
+### Flujo funcional completo
+Login → Dashboard → Pacientes → Nuevo paciente → Lista actualizada
+
+### Secciones pendientes de construir
+- Detalle de paciente
+- Nueva consulta
+- Recetas
+- Órdenes de estudio
+- Agenda
+- Configuración
+
+### Siguiente paso
+- Pantalla de detalle del paciente con historial de consultas
