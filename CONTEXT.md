@@ -233,3 +233,25 @@ a la Dra. Alma Lorena
 ### Siguiente paso
 Decidir: ¿Órdenes de estudio (similar a recetas) o ya mostrarle
 el prototipo a la Dra. Alma Lorena para feedback real?
+### Checkpoint 12 — sesión 3
+
+### Lo que se hizo
+- Quitada sección "Consultas" del sidebar (las consultas viven en
+  el expediente del paciente, validado contra Jane App)
+- Backend de configuración: GET/PUT /configuracion
+  - Datos del médico (nombre, especialidad, cédulas, consultorio, etc.)
+  - Márgenes de impresión para hojas membretadas
+- Frontend: pantalla Configuración con modo lectura/edición
+  - Campos bloqueados con candado por defecto
+  - Botón "Editar" habilita campos y muestra "Guardar cambios"
+  - Botón "Cancelar" descarta cambios y recarga datos originales
+
+### Estado del MVP
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas, Configuración
+⏳ Pendiente: Generación de PDF de receta con datos/márgenes configurados,
+   Órdenes de estudio
+
+### Siguiente paso
+Generar PDF de receta usando los datos de configuración y los
+márgenes para hojas membretadas — esto cierra el círculo de
+"Configuración" + "Recetas"
