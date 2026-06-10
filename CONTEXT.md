@@ -164,3 +164,25 @@ Login → Dashboard → Pacientes → Detalle → Nueva consulta → Historial
 ### Siguiente paso
 - Subida de fotos desde el frontend (tab Archivos)
 - O recetas — decidir con la Dra. Alma Lorena qué es más importante
+
+### Checkpoint 9 — sesión 3
+
+### Lo que se hizo
+- Tab "Archivos" en detalle de paciente funcionando completo:
+  - Subir archivo (foto, lab, radiografía, consentimiento, otro)
+  - Listar archivos por paciente
+  - Ver/abrir archivo en pestaña nueva (URL firmada)
+- Endpoint GET /archivos/{id}/url corregido con REST directo
+  (mismo fix que el upload, bypass del bug RLS de Storage)
+
+### Flujo completo funcional end-to-end
+Login → Dashboard → Pacientes → Nuevo paciente → Detalle →
+  → Nueva consulta → Tab Archivos → Subir foto → Ver foto
+
+### Estado del MVP
+✅ Auth, Pacientes, Consultas, Archivos — funcionando
+⏳ Pendiente: Recetas, Órdenes, Agenda, PDF expediente
+
+### Siguiente paso
+Decidir: ¿Recetas o mostrarle esto a la Dra. Alma Lorena para feedback
+antes de seguir construyendo?
