@@ -145,3 +145,22 @@ Login → Dashboard → Pacientes → Nuevo paciente → Lista actualizada
 
 ### Siguiente paso
 - Pantalla de detalle del paciente con historial de consultas
+
+### Checkpoint 8 — sesión 3
+
+### Lo que se hizo
+- Pantalla detalle de paciente completa:
+  - Header con avatar, nombre, edad, teléfono, email
+  - Cards de alergias y antecedentes
+  - Tabs: Consultas / Archivos
+  - Historial de consultas con fecha, tipo y diagnóstico
+- Modal de nueva consulta funcionando:
+  - Tipo, motivo, exploración, diagnóstico, plan
+  - Se guarda y actualiza el historial en tiempo real
+
+### Flujo completo funcional
+Login → Dashboard → Pacientes → Detalle → Nueva consulta → Historial
+
+### Siguiente paso
+- Subida de fotos desde el frontend (tab Archivos)
+- O recetas — decidir con la Dra. Alma Lorena qué es más importante
