@@ -186,3 +186,28 @@ Login → Dashboard → Pacientes → Nuevo paciente → Detalle →
 ### Siguiente paso
 Decidir: ¿Recetas o mostrarle esto a la Dra. Alma Lorena para feedback
 antes de seguir construyendo?
+
+### Checkpoint 10 — sesión 3
+
+### Lo que se hizo
+- Tabla `agenda` creada en Supabase (cita / bloqueo, RLS aplicado)
+- Backend completo: GET/POST/PUT/DELETE /agenda
+- Frontend: vista semanal de agenda
+  - Navegación entre semanas (anterior/hoy/siguiente)
+  - Eventos posicionados por hora y duración real (no solo 1hr fija)
+  - Tipo "cita" (vinculada a paciente) vs "bloqueo" (con motivo)
+  - Modal para crear evento, clic en celda preselecciona fecha/hora
+  - Eliminar evento con confirmación
+- Fix de zona horaria: horarios se guardan con offset -07:00 (Mexicali)
+
+### Estado del MVP
+✅ Auth, Pacientes, Consultas, Archivos, Agenda — funcionando end-to-end
+⏳ Pendiente: Recetas, Órdenes de estudio, PDF expediente
+
+### Pendiente técnico (no bloqueante)
+- Asistente no debe ver motivo de bloqueos (lógica de roles aún no diferenciada)
+- Vista de agenda no diferencia entre médico y asistente todavía
+
+### Siguiente paso
+Recetas — último módulo grande antes de mostrarle el prototipo
+a la Dra. Alma Lorena
