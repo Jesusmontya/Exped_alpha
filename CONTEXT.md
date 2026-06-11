@@ -277,3 +277,25 @@ márgenes para hojas membretadas — esto cierra el círculo de
 - Probar PDF de receta end-to-end
 - Decidir: ¿Órdenes de estudio o ya mostrarle el prototipo
   a la Dra. Alma Lorena?
+
+  ### Checkpoint 14 — sesión 3
+
+### Lo que se hizo
+- Datos de prueba cargados en Configuración (Dra. Alma Lorena)
+- Datos de prueba de receta otorrino cargados para testing
+- Identificado pendiente: botón "Probar impresión" en Configuración
+  es un placeholder, no genera nada todavía
+
+### Estado del MVP
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas + PDF,
+   Configuración con hojas membretadas
+⏳ Pendiente:
+   - "Probar impresión" — generar PDF de muestra con márgenes
+     configurados (sin datos de paciente, solo para calibrar)
+   - Órdenes de estudio
+
+### Siguiente paso
+Construir "Probar impresión": endpoint que genera PDF de muestra
+con guías visuales de los márgenes configurados, para que el
+médico calibre contra su hoja membretada física antes de usar
+el sistema con pacientes reales.
