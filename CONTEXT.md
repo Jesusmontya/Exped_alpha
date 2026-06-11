@@ -250,7 +250,7 @@ el prototipo a la Dra. Alma Lorena para feedback real?
 ✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas, Configuración
 ⏳ Pendiente: Generación de PDF de receta con datos/márgenes configurados,
    Órdenes de estudio
-
+   
 ### Siguiente paso
 Generar PDF de receta usando los datos de configuración y los
 márgenes para hojas membretadas — esto cierra el círculo de
