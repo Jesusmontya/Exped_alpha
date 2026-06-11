@@ -255,3 +255,25 @@ el prototipo a la Dra. Alma Lorena para feedback real?
 Generar PDF de receta usando los datos de configuración y los
 márgenes para hojas membretadas — esto cierra el círculo de
 "Configuración" + "Recetas"
+### Checkpoint 13 — sesión 3
+
+### Lo que se hizo
+- Generación de PDF de recetas con reportlab
+  - GET /recetas/{id}/pdf
+  - Usa datos del médico (nombre, especialidad, cédula, consultorio)
+    y márgenes configurados en Configuración
+  - Incluye: encabezado médico, datos del paciente, lista de
+    medicamentos con dosis/frecuencia/duración, indicaciones
+    generales, pie con datos de contacto
+- Frontend: botón "Imprimir" en recetas descarga el PDF como blob
+  (con autenticación) y lo abre en pestaña nueva
+
+### Estado del MVP — PRÁCTICAMENTE COMPLETO
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas + PDF,
+   Configuración con hojas membretadas
+⏳ Pendiente: Órdenes de estudio (mismo patrón que recetas, más simple)
+
+### Siguiente paso
+- Probar PDF de receta end-to-end
+- Decidir: ¿Órdenes de estudio o ya mostrarle el prototipo
+  a la Dra. Alma Lorena?
