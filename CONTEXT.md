@@ -299,3 +299,39 @@ Construir "Probar impresión": endpoint que genera PDF de muestra
 con guías visuales de los márgenes configurados, para que el
 médico calibre contra su hoja membretada física antes de usar
 el sistema con pacientes reales.
+
+### Checkpoint 15 — sesión 3
+
+### Lo que se hizo
+- Backend completo de órdenes de estudio (mismo patrón que recetas):
+  - GET/POST/DELETE /ordenes
+  - GET /ordenes/{id}/pdf — genera PDF con hoja membretada
+- Frontend: tab "Órdenes" en detalle de paciente
+  - Modal nueva orden (tipo, estudios, indicaciones, urgente)
+  - Listado, imprimir PDF, eliminar
+- Probado end-to-end: orden de laboratorio creada e impresa correctamente
+
+### Decisión: módulo de migración con IA
+- Nueva funcionalidad definida: "Migrar pacientes" usando IA con visión
+- Flujo acordado:
+  1. Médico sube varias fotos de expediente físico (multi-página)
+  2. Backend manda imágenes a Claude (API con visión)
+  3. IA extrae todo lo posible: datos generales, antecedentes,
+     alergias, intenta detectar consultas pasadas
+  4. Pantalla de revisión: foto original lado a lado con datos
+     extraídos, editable
+  5. Médico confirma → se crea el paciente
+
+### Estado del MVP
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas + PDF,
+   Órdenes + PDF, Configuración con hojas membretadas
+⏳ Pendiente:
+   - Migración con IA (necesita API key de Anthropic — pendiente
+     de obtener)
+   - Quitar/decidir qué hacer con secciones "Recetas" y "Órdenes"
+     vacías en el sidebar (mismo caso que "Consultas")
+
+### Siguiente paso
+1. Obtener API key de Anthropic (console.anthropic.com)
+2. Construir endpoint de migración con visión
+3. Pantalla de revisión lado a lado
