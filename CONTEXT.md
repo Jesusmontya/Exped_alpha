@@ -368,3 +368,35 @@ el sistema con pacientes reales.
 ### Siguiente paso
 1. Cuando haya créditos en Anthropic: probar migración end-to-end
 2. Mostrarle el prototipo completo a la Dra. Alma Lorena
+
+### Checkpoint 17 — sesión 3 (cierre)
+
+### Lo que se hizo
+- Migración con IA cambiada de Anthropic a Google Gemini
+  (gemini-2.5-flash) por falta de créditos en Anthropic
+- Conversión HEIC → JPEG funcionando (fotos de iPhone)
+- Migración con IA probada y funcionando end-to-end
+
+### Estado del MVP — COMPLETO Y FUNCIONAL
+✅ Auth (registro + login)
+✅ Pacientes (CRUD completo)
+✅ Consultas (historial dentro del expediente)
+✅ Archivos/fotos (subida, visualización)
+✅ Agenda (vista semanal, citas y bloqueos)
+✅ Recetas (múltiples medicamentos + PDF para hoja membretada)
+✅ Órdenes de estudio (laboratorio/imagen + PDF)
+✅ Configuración (datos médico + márgenes de impresión)
+✅ Migración con IA (sube fotos de expediente físico → IA extrae
+  datos → revisión editable → crea paciente)
+
+### Siguiente paso
+Mostrarle el prototipo completo a la Dra. Alma Lorena Gutiérrez
+y recopilar feedback real de uso. Su feedback determina las
+siguientes prioridades de desarrollo.
+
+### Pendientes menores identificados (no bloqueantes)
+- Secciones "Recetas" y "Órdenes" en sidebar son redundantes
+  (ya viven dentro del expediente) — decidir si quitar
+- Diferenciación de vista médico vs asistente (bloqueos de
+  agenda sin mostrar motivo al asistente) — pendiente de
+  implementar roles
