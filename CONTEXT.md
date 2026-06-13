@@ -335,3 +335,36 @@ el sistema con pacientes reales.
 1. Obtener API key de Anthropic (console.anthropic.com)
 2. Construir endpoint de migración con visión
 3. Pantalla de revisión lado a lado
+
+### Checkpoint 16 — sesión 3
+
+### Lo que se hizo
+- Backend completo de migración con IA (Claude vision):
+  - POST /migracion/extraer — recibe múltiples imágenes,
+    extrae datos del paciente con Claude
+  - Conversión automática HEIC → JPEG (fotos de iPhone)
+    usando pillow-heif
+  - Bucket "migraciones" creado en Supabase Storage
+- Frontend completo: pantalla "Migrar paciente"
+  - Drag & drop / selección de múltiples fotos
+  - Pantalla de revisión: fotos lado a lado con datos extraídos
+  - Badge de confianza (alta/media/baja)
+  - Notas de la IA sobre legibilidad
+  - Formulario editable completo antes de confirmar
+  - Detecta consultas pasadas y las crea como historial
+  - Al confirmar, crea el paciente y redirige a su expediente
+
+### Bloqueado
+- Cuenta de Anthropic sin créditos — no se puede probar el
+  flujo end-to-end todavía
+- Conversión HEIC verificada (no dio error de formato, solo
+  de créditos — buena señal)
+
+### Estado del MVP — COMPLETO
+✅ Auth, Pacientes, Consultas, Archivos, Agenda, Recetas + PDF,
+   Órdenes + PDF, Configuración con hojas membretadas,
+   Migración con IA (código listo, pendiente créditos)
+
+### Siguiente paso
+1. Cuando haya créditos en Anthropic: probar migración end-to-end
+2. Mostrarle el prototipo completo a la Dra. Alma Lorena
